@@ -1,5 +1,9 @@
-
+/*
+conmando para executar o teste:
+k6 run ./mao-na-massa/consulta-crocodilos-ID.js -e URL=https://test-api.k6.io/public
+*/
 import http from 'k6/http';
+import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
 
 export const options = {
     scenarios: {
@@ -24,7 +28,7 @@ export const options = {
             maxDuration: '1m',
             gracefulStop: '10s',
             tags: {
-                test_type: 'busca_de_crocodilos',
+                test_type: 'busca_de_crocodilos_id',
             },
         },
     },
@@ -40,4 +44,11 @@ export function buscar() {
     } else {
         http.get(__ENV.URL+'crocodiles/1');
     }
+}
+
+
+export function handleSummary(data) {
+    return {
+        'summary.html': htmlReport(data),
+    };
 }
