@@ -1,0 +1,33 @@
+{
+    "crocodilos":[
+    {
+    "id": 1,
+    "name": "Bert",
+    "sex": "M",
+    "data_of_birth": "2010-06-27",
+    "age": 12
+    },
+    {
+    "id": 12,
+    "name": "Bert",
+    "sex": "M",
+    "data_of_birth": "2010-06-27",
+    "age": 12
+    },
+    {
+    "id": 67,
+    "name": "Bert",
+    "sex": "M",
+    "data_of_birth": "2010-06-27",
+    "age": 12
+    },
+    {
+    "id": 9999,
+    "name": "Bert",
+    "sex": "M",
+    "data_of_birth": "2010-06-27",
+    "age": 12
+    }
+]
+}
+
